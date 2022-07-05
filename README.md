@@ -27,50 +27,23 @@ All files can be found in `./resources/js`
 ### Contributers
 
 -   **[Stanley Kwamina Otabil](https://github.com/HueyWhyte)**
--   **[Jacob Borders](https://github.com/code-kid)**
+-   **[Jacob Borders](https://github.com/kwesi-codekid)**
 -   **[Priscilla](https://github.com/priscilla)**
 
 ## Directory Hierarchy
 
 ```
 |—— app
-|    |—— Console
-|        |—— Kernel.php
-|    |—— Exceptions
-|        |—— Handler.php
 |    |—— Http
 |        |—— Controllers
 |            |—— AdminController.php
 |            |—— AttendanceController.php
-|            |—— Auth
-|                |—— AuthenticatedSessionController.php
-|                |—— ConfirmablePasswordController.php
-|                |—— EmailVerificationNotificationController.php
-|                |—— EmailVerificationPromptController.php
-|                |—— NewPasswordController.php
-|                |—— PasswordResetLinkController.php
-|                |—— RegisteredUserController.php
-|                |—— VerifyEmailController.php
 |            |—— Controller.php
 |            |—— EmployeeController.php
 |            |—— LecturerController.php
 |            |—— LogController.php
 |            |—— SettingController.php
 |            |—— StudentController.php
-|        |—— Kernel.php
-|        |—— Middleware
-|            |—— Authenticate.php
-|            |—— EncryptCookies.php
-|            |—— HandleInertiaRequests.php
-|            |—— PreventRequestsDuringMaintenance.php
-|            |—— RedirectIfAuthenticated.php
-|            |—— TrimStrings.php
-|            |—— TrustHosts.php
-|            |—— TrustProxies.php
-|            |—— VerifyCsrfToken.php
-|        |—— Requests
-|            |—— Auth
-|                |—— LoginRequest.php
 |    |—— Models
 |        |—— Admin.php
 |        |—— Attendance.php
@@ -80,14 +53,7 @@ All files can be found in `./resources/js`
 |        |—— Setting.php
 |        |—— Student.php
 |        |—— User.php
-|    |—— Providers
-|        |—— AppServiceProvider.php
-|        |—— AuthServiceProvider.php
-|        |—— BroadcastServiceProvider.php
-|        |—— EventServiceProvider.php
-|        |—— RouteServiceProvider.php
 |—— database
-|    |—— .gitignore
 |    |—— factories
 |        |—— AdminFactory.php
 |        |—— AttendanceFactory.php
@@ -120,8 +86,6 @@ All files can be found in `./resources/js`
 |        |—— SettingSeeder.php
 |        |—— StudentSeeder.php
 |—— resources
-|    |—— css
-|        |—— app.css
 |    |—— js
 |        |—— app.jsx
 |        |—— bootstrap.js
@@ -160,9 +124,6 @@ All files can be found in `./resources/js`
 |                |—— Report.jsx
 |            |—— Students.jsx
 |            |—— Welcome.jsx
-|    |—— views
-|        |—— app.blade.php
-|        |—— welcome.blade.php
 |—— routes
 |    |—— api.php
 |    |—— auth.php
