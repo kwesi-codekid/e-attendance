@@ -2,14 +2,18 @@ import React from "react";
 import Authenticated from "@/Layouts/Authenticated";
 import { Head } from "@inertiajs/inertia-react";
 
-export default function Student(props) {
+export default function Student({ auth, errors, student }) {
+    console.log(student);
     return (
-        <Authenticated auth={props.auth} errors={props.errors}>
-            <Head title="Student | fasfasf" />
+        <Authenticated auth={auth} errors={errors}>
+            <Head
+                title={` ${student.first_name} ${student.middle_name} ${student.last_name} | Student `}
+            />
 
             <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg dark:bg-gray-700">
                 <div className="p-6 border-b border-gray-200">
-                    Student | fasfasf
+                    Student | {student.first_name} {student.middle_name}{" "}
+                    {student.last_name}
                 </div>
             </div>
         </Authenticated>

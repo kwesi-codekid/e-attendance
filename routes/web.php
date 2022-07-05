@@ -42,7 +42,7 @@ Route::get('/staff', function () {
 
 
 Route::get('/students', [StudentController::class, 'getStudents'])->middleware(['auth', 'verified'])->name('students');
-Route::get('/students/{id}', [StudentController::class, 'getStudent'])->middleware(['auth', 'verified'])->name('student');
+Route::get('/students/{id?}', [StudentController::class, 'getStudent'])->middleware(['auth', 'verified'])->name('student');
 
 
 Route::get('/lecturers', [LecturerController::class, 'getLecturers'])->middleware(['auth', 'verified'])->name('lecturers');

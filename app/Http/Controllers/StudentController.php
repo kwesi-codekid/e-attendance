@@ -17,6 +17,7 @@ class StudentController extends Controller
 
     function getStudent($id)
     {
-        return Inertia::render('Student/Index');
+        $student = Student::findOrFail($id);
+        return Inertia::render('Student/Index', ['student' => $student]);
     }
 }

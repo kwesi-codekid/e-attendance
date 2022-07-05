@@ -23,7 +23,7 @@ const links = [
         icon: <IoIosPeople size={23} />,
     },
     {
-        id: 3,
+        id: 90,
         href: "students",
         name: "Students",
         icon: <IoIosPeople size={23} />,
