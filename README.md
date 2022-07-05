@@ -4,10 +4,10 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ## Laravel Part
 
--   composer install
--   php artisan migrate (if you are running the project for the first time)
--   php artisan db:seed
--   php artisan serve (to serve the project, usually on port 8000)
+-   `composer install`
+-   `php artisan migrate` (if you are running the project for the first time)
+-   `php artisan db:seed`
+-   `php artisan serve` (to serve the project, usually on port 8000)
 
 ## React Part
 
@@ -21,8 +21,8 @@ All files can be found in `./resources/js`
 
 ### Run react app
 
--   npm i (run once on first time)[install dependencies]
--   npm run dev (to run the react serve abd compile the app in real time)[auto refreshes when file change is detected]
+-   `npm i` (run once on first time)[install dependencies]
+-   `npm run dev` (to run the react serve abd compile the app in real time)[auto refreshes when file change is detected]
 
 ### Contributers
 
