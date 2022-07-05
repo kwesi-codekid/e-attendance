@@ -1,6 +1,7 @@
 import React from "react";
 import Authenticated from "@/Layouts/Authenticated";
 import { Head, Link } from "@inertiajs/inertia-react";
+import LinkButton from "@/Components/LinkButton";
 
 export default function Students({
     auth,
@@ -21,10 +22,10 @@ export default function Students({
             <Head title="Students" />
 
             <div className="bg-white flex flex-col overflow-hidden shadow-sm sm:rounded-lg dark:bg-gray-700">
-                <div className="px-6 pt-6 ">
+                <div className="px-6 pt-6 flex items-center justify-between">
                     <h1 className="font-bold text-2xl">Students</h1>
 
-                    <Link href={route("student")}>New Student</Link>
+                    <LinkButton label="New Student" href="student" />
                 </div>
 
                 <div className="py-6 px-1 ">

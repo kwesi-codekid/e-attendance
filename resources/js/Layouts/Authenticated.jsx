@@ -159,7 +159,7 @@ export default function Authenticated({ auth, header, children }) {
             <main className="flex">
                 <SideNavigation />
 
-                <section className="ml-56 pt-16 max-w-7xl w-full mx-auto sm:px-6 lg:px-8 dark:text-white py-5">
+                <section className="ml-56 pt-16 max-w-7xl w-full mx-auto px-3 dark:text-white py-5 ">
                     {children}
                 </section>
             </main>

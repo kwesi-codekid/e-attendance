@@ -22,6 +22,7 @@
         "vite": "^2.9.11"
     },
     "dependencies": {
+        "react-calendar": "^3.7.0",
         "react-icons": "^4.4.0"
     }
 }

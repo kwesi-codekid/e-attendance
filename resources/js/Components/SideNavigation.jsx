@@ -46,7 +46,7 @@ function SideNavigation() {
                         active={route().current(link.href)}
                         title={link.name}
                         icon={link.icon}
-                        className="dark:text-white"
+                        className="dark:text-white "
                     />
                 ))}
             </div>
