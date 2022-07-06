@@ -46,7 +46,7 @@ Route::get('/students/{id?}', [StudentController::class, 'getStudent'])->middlew
 
 
 Route::get('/lecturers', [LecturerController::class, 'getLecturers'])->middleware(['auth', 'verified'])->name('lecturers');
-Route::get('/lecturers/{id}', [LecturerController::class, 'getLecturer'])->middleware(['auth', 'verified'])->name('lecturer');
+Route::get('/lecturers/{id?}', [LecturerController::class, 'getLecturer'])->middleware(['auth', 'verified'])->name('lecturer');
 
 
 Route::get('/settings', function () {

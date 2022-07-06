@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('attendances', function (Blueprint $table) {
+        Schema::create('stations', function (Blueprint $table) {
+
             $table->id();
-            $table->string("station_id");
-            $table->string("user_id"); // can be student_id, worker_id, lecturer_id
-            $table->boolean("status"); // true means present, false means absent
-            $table->string("occasion_id");
-            $table->timestamps(); // time the attendance was taken
+            $table->string('uuid');
+            $table->string('name');
+            $table->string('location');
+            $table->timestamps();
         });
     }
 
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('attendances');
+        Schema::dropIfExists('stations');
     }
 };

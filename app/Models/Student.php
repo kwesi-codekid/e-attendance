@@ -14,4 +14,11 @@ class Student extends Model
         'first_name',
         'last_name'
     ];
+
+
+
+    public function attendances()
+    {
+        return $this->hasMany(Attendance::class, 'user_id', 'student_id');
+    }
 }

@@ -17,6 +17,7 @@ class LecturerController extends Controller
 
     function getLecturer($id)
     {
-        return Inertia::render('Lecturers/Index');
+        $lecturer = Lecturer::findOrFail($id);
+        return Inertia::render('Lecturer/Index', ['lecturer' => $lecturer]);
     }
 }

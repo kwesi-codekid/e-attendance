@@ -2,7 +2,7 @@ import React from "react";
 import Authenticated from "@/Layouts/Authenticated";
 import { Head, Link } from "@inertiajs/inertia-react";
 
-export default function Students({
+export default function Lecturers({
     auth,
     errors,
     lecturers: {
@@ -13,12 +13,10 @@ export default function Students({
         last_page_url,
         first_page_url,
     },
-    // students,
 }) {
-    console.log(links);
     return (
         <Authenticated auth={auth} errors={errors}>
-            <Head title="Students" />
+            <Head title="Lecturers" />
 
             <div className="bg-white flex flex-col overflow-hidden shadow-sm sm:rounded-lg dark:bg-gray-700">
                 <div className="px-6 pt-6 ">
@@ -26,49 +24,49 @@ export default function Students({
                 </div>
 
                 <div className="py-6 px-1 ">
-                    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-                        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+                        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-900 dark:text-gray-400">
                                 <tr>
-                                    <th scope="col" class="px-6 py-3">
+                                    <th scope="col" className="px-6 py-3">
                                         Name
                                     </th>
-                                    <th scope="col" class="px-6 py-3">
+                                    <th scope="col" className="px-6 py-3">
                                         Gender
                                     </th>
-                                    <th scope="col" class="px-6 py-3">
+                                    <th scope="col" className="px-6 py-3">
                                         Program
                                     </th>
-                                    <th scope="col" class="px-6 py-3">
+                                    <th scope="col" className="px-6 py-3">
                                         Price
                                     </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        <span class="sr-only">View</span>
+                                    <th scope="col" className="px-6 py-3">
+                                        <span className="sr-only">View</span>
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {data.map((student) => (
-                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                {data.map((lecturer) => (
+                                    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                         <th
                                             scope="row"
-                                            class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
+                                            className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
                                         >
-                                            {student?.first_name}{" "}
-                                            {student?.middle_name}{" "}
-                                            {student?.last_name}
+                                            {lecturer?.first_name}{" "}
+                                            {lecturer?.middle_name}{" "}
+                                            {lecturer?.last_name}
                                         </th>
-                                        <td class="px-6 py-4">
-                                            {student?.gender}
+                                        <td className="px-6 py-4">
+                                            {lecturer?.gender}
                                         </td>
-                                        <td class="px-6 py-4">
-                                            {student?.program}
+                                        <td className="px-6 py-4">
+                                            {lecturer?.program}
                                         </td>
-                                        <td class="px-6 py-4">$2999</td>
-                                        <td class="px-6 py-4 text-right">
+                                        <td className="px-6 py-4">$2999</td>
+                                        <td className="px-6 py-4 text-right">
                                             <Link
-                                                href={route("student", {
-                                                    id: student?.id,
+                                                href={route("lecturer", {
+                                                    id: lecturer?.id,
                                                 })}
                                             >
                                                 View Profile

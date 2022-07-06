@@ -17,7 +17,10 @@ class AttendanceFactory extends Factory
     public function definition()
     {
         return [
-            //
+            "station_id" => $this->faker->uuid(),
+            "user_id" => $this->faker->uuid(),
+            "status" => $this->faker->boolean(),
+            "occasion_id" => $this->faker->uuid(),
         ];
     }
 }

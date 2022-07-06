@@ -19,9 +19,11 @@ return new class extends Migration
             $table->string("middle_name");
             $table->string("last_name");
             $table->string("gender");
-            $table->string("rfid_id")->nullable();
+            $table->string("student_id");
+            $table->string("class")->nullable();
             $table->string("bio")->nullable();
             $table->date("dob");
+            $table->string("rfid_id")->nullable();
             $table->string("program_id")->nullable();
             $table->timestamps();
         });

@@ -5,13 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Attendance extends Model
+class Station extends Model
 {
     use HasFactory;
-
-
-    public function student()
-    {
-        return $this->hasOne(Student::class, 'student_id', 'user_id');
-    }
 }
