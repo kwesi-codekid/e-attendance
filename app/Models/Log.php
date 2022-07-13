@@ -8,4 +8,22 @@ use Illuminate\Database\Eloquent\Model;
 class Log extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'user_id',
+        'action',
+        'station_id',
+    ];
+
+
+    public function student()
+    {
+        return $this->hasOne(Student::class, 'student_code', 'user_id');
+    }
+
+    // relationship with station table
+    public function station()
+    {
+        return $this->hasOne(Station::class, 'id', 'station_id');
+    }
 }

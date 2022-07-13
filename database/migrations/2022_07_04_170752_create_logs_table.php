@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string("station_id");
             $table->string("user_id");
-            $table->string("rfid");
             $table->boolean("action")->nullable();
             $table->timestamps();
         });

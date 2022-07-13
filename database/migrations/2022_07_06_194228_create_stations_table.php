@@ -14,9 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('stations', function (Blueprint $table) {
-
-            $table->id();
-            $table->string('uuid');
+            $table->uuid('id')->primary();
             $table->string('name');
             $table->string('location');
             $table->timestamps();

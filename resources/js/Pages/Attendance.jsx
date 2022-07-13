@@ -61,7 +61,8 @@ export default function Attendance({
                                             {entry?.student?.last_name}
                                         </th>
                                         <td className="px-6 py-4">
-                                            {entry?.station_id}
+                                            {entry?.station?.name}{" "}
+                                            {entry?.station?.location}
                                         </td>
                                         <td className="px-6 py-4">
                                             {entry?.status == 1 ? (
@@ -86,7 +87,7 @@ export default function Attendance({
                                         <td className="px-6 py-4 text-right">
                                             <Link
                                                 href={route("student", {
-                                                    id: entry?.id,
+                                                    id: entry?.student?.id,
                                                 })}
                                             >
                                                 View Profile

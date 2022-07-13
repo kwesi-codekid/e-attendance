@@ -24,8 +24,6 @@ class DatabaseSeeder extends Seeder
             'password' =>  Hash::make('asdfghqwe')
         ]);
 
-        $this->call(StudentSeeder::class);
-        $this->call(LecturerSeeder::class);
-        $this->call(AttendanceSeeder::class);
+        $this->call([StudentSeeder::class, LecturerSeeder::class, AttendanceSeeder::class, StationSeeder::class]);
     }
 }

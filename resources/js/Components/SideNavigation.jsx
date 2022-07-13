@@ -29,6 +29,18 @@ const links = [
         icon: <IoIosPeople size={23} />,
     },
     {
+        id: 9,
+        href: "logs",
+        name: "Logs",
+        icon: <IoIosPeople size={23} />,
+    },
+    {
+        id: 5,
+        href: "stations",
+        name: "Stations",
+        icon: <IoIosPeople size={23} />,
+    },
+    {
         id: 6,
         href: "settings",
         name: "Settings",

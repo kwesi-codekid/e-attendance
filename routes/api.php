@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AttendanceController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::post('/attendance/new/{rfid?}', [AttendanceController::class, 'store'])->name('attendance.store');
+Route::get('/attendance/show', [AttendanceController::class, 'show'])->name('attendance.show');

@@ -20,10 +20,11 @@ class StudentFactory extends Factory
             "first_name" => $this->faker->firstName(),
             "middle_name" => $this->faker->firstName(),
             "last_name" => $this->faker->lastName(),
-            "student_id" => $this->faker->uuid(),
+            "student_code" => $this->faker->uuid(),
             "program_id" => $this->faker->uuid(),
             "gender" => "male",
             "dob" => $this->faker->date(),
+            "rfid" => $this->faker->uuid()
         ];
     }
 }

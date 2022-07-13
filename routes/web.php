@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\LecturerController;
+use App\Http\Controllers\LogController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -32,7 +33,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
-Route::get('/attendance', [AttendanceController::class, 'getAllAttendance'])->middleware(['auth', 'verified'])->name('attendance');
+Route::get('/attendance', [AttendanceController::class, 'index'])->middleware(['auth', 'verified'])->name('attendance');
 
 
 Route::get('/staff', function () {
@@ -52,5 +53,11 @@ Route::get('/lecturers/{id?}', [LecturerController::class, 'getLecturer'])->midd
 Route::get('/settings', function () {
     return Inertia::render('Settings');
 })->middleware(['auth', 'verified'])->name('settings');
+
+Route::get('/stations', function () {
+    return Inertia::render('Stations');
+})->middleware(['auth', 'verified'])->name('stations');
+
+Route::get('/logs', [LogController::class, 'index'])->middleware(['auth', 'verified'])->name('logs');
 
 require __DIR__ . '/auth.php';

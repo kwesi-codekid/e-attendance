@@ -12,13 +12,14 @@ class Student extends Model
 
     protected $fillable = [
         'first_name',
-        'last_name'
+        'last_name',
+        'rfid'
     ];
 
 
 
     public function attendances()
     {
-        return $this->hasMany(Attendance::class, 'user_id', 'student_id');
+        return $this->hasMany(Attendance::class, 'user_id', 'student_code');
     }
 }

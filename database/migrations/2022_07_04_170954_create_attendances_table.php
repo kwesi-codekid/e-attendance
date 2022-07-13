@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('attendances', function (Blueprint $table) {
             $table->id();
             $table->string("station_id");
-            $table->string("user_id"); // can be student_id, worker_id, lecturer_id
+            $table->string("user_id"); // can be student_code, worker_id, lecturer_id
             $table->boolean("status"); // true means present, false means absent
             $table->string("occasion_id");
             $table->timestamps(); // time the attendance was taken

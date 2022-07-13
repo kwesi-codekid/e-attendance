@@ -37,9 +37,7 @@ export default function Lecturers({
                                     <th scope="col" className="px-6 py-3">
                                         Program
                                     </th>
-                                    <th scope="col" className="px-6 py-3">
-                                        Price
-                                    </th>
+
                                     <th scope="col" className="px-6 py-3">
                                         <span className="sr-only">View</span>
                                     </th>
@@ -65,7 +63,6 @@ export default function Lecturers({
                                         <td className="px-6 py-4">
                                             {lecturer?.program}
                                         </td>
-                                        <td className="px-6 py-4">$2999</td>
                                         <td className="px-6 py-4 text-right">
                                             <Link
                                                 href={route("lecturer", {
