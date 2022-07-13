@@ -10,7 +10,7 @@ class LogController extends Controller
 {
     function index()
     {
-        $logs = Log::with(['student', 'station'])->paginate(20);
+        $logs = Log::with(['student', 'station'])->orderBy('id', 'desc')->paginate(20);
         return Inertia::render('Logs', ['logs' => $logs]);
     }
 }

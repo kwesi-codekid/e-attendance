@@ -22,4 +22,10 @@ class Student extends Model
     {
         return $this->hasMany(Attendance::class, 'user_id', 'student_code');
     }
+
+
+    public function logs()
+    {
+        return $this->hasMany(Log::class, 'user_id', 'student_code');
+    }
 }

@@ -15,6 +15,7 @@ export default function Attendance({
     },
 }) {
     console.log(data);
+
     return (
         <Authenticated auth={auth} errors={errors}>
             <Head title="Attendance" />
